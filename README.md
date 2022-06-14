@@ -11,7 +11,7 @@
 
 <br>
 
-<style>
+<style type="text/css">
 @media (prefers-color-scheme: dark){
 #math{
   filter:invert(1);
