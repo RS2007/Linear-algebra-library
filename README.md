@@ -11,7 +11,14 @@
 
 <br>
 
-<img src="./images/Math_white.svg" style="@media (prefers-color-scheme: dark) { filter:invert(1);}">
+<style>
+@media (prefers-color-scheme: dark){
+#math{
+  filter:invert(1);
+}
+}
+</style>
+<img src="./images/Math_white.svg" id="math">
 
 <br/>
 <br/>
