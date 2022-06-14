@@ -47,7 +47,7 @@
 - Finding the determinant
 - QR decomposition
  
-### How I built it?
+### Background and References
 ***
 
 - I was completely new to C when I started with this project 
