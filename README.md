@@ -11,7 +11,7 @@
 
 <br>
 
-![Math_white.svg](images/Math_white.svg)
+<img src="./images/Math_white.svg" style="@media (prefers-color-scheme: dark) { filter:invert(1);}">
 
 <br/>
 <br/>
