@@ -11,14 +11,11 @@
 
 <br>
 
-<style type="text/css">
-@media (prefers-color-scheme: dark){
-#math{
-  filter:invert(1);
-}
-}
-</style>
-<img src="./images/Math_white.svg" id="math">
+
+<img src="./images/Math_white.svg" id="math" style="filter:invert(1)">
+
+> If you are a light mode user, checkout the image [here](/images/Math_black.svg)
+
 
 <br/>
 <br/>
