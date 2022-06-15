@@ -17,11 +17,13 @@ int main(int argc, char *argv[])
     A->data[2][1] = 5;
     A->data[2][2] = 0;
 
+
+
     B->data[0][0] = 20;
     B->data[1][0] = 10;
     B->data[2][0] = 0;
 
-    mat *x = solve_linear_LU(A, B);
+    mat *x =solve_linear_LU(A, B);
 //    mat *x = mat_mul_naive(A,B);
     mat_print(x);
     mat_free(x);

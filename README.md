@@ -1,76 +1,104 @@
 ## A Custom linear algebra library
-***
- 
-### About
-<p>This project is an attempt to implement whatever I learned during my introductory linear algebra course during my first year of engineering.  </p>
 
-<h3>Problem</h3>
+---
 
-
-<h4>Input for solving a linear system of equations </h4>
+### Motivation
+<p>The reason for building this project was to implement the common linear algebra algorithms that were introduced during the introductory linear algebra course during my freshman year</p>
 
 <br>
 
+### Demo
+<br>
 
-<img src="./images/Math_white.svg" id="math" style="filter:invert(1)">
+$$2*x+5*y+z=20$$
+$$4*x+5*y+z=10$$
+$$6x+5y=0$$
+$$A = \begin{pmatrix} 2 & 5 & 1\\ 4 & 5 & 1\\ 6 & 5 & 0\end{pmatrix}$$
+$$B = \begin{pmatrix} 20 \\ 10 \\ 0\end{pmatrix}$$
 
-> If you have difficulty viewing this image, checkout the image [here](/images/Math_black.svg)
+Solution => $ x=-5,y=6,z=0$
 
 
 <br/>
 <br/>
 
-<h4>Main function</h4>
+![./images/gif.gif](./images/gif.gif)
 
-![img.png](images/input.png)
+### What can it do?
 
+---
 
-<h4>Output</h4>
+**Data structures**:
+  - Matrix(```mat```)
+  - ```c
+    {
+        unsigned int num_rows;
+        unsigned int num_cols;
+        double **data;
+        int isSquare;
+    }
+    ```
+  -LUP Matrix(```mat_lup```)
+  - ```c
+    {
+      mat *L;
+      mat *U;
+      mat *P;
+      unsigned int num_permutations;
+    }
+    ```
 
-![Output.png](images/Output.png)
+**API**:
 
-
-### What can it do? 
-***
-- Matrix multiplication 
-  - Currently,this is done using the naive O(n^3) algorithm (```mat_mul_naive``` function in the code)
-  - The plan is to shift this to strassen's algorithm(```mat_mul_strassen`` function in the code)
+- Matrix addition 
+  - ```mat* mat_add(mat* a,mat* b)```
+- Matrix subtraction
+  - ```mat* mat_subtract(mat* a,mat* b)```
+- Matrix multiplication
+  - ```mat* mat_mul_naive(mat* a,mat* b)``` 
 - Finding Row Echelon Form of a Matrix
+  - ```mat* mat_ref(mat* a) ```
 - Finding Reduced Row Echelon Form of a Matrix
+  - ```mat* mat_rref(mat* a)```
 - LU decomposition
+  - ```mat_lup* mat_LU(mat* a) ```
 - Solving linear equations
-  - Multiple Implementations of the same
-    - ```solve_linear_forward``` using the forward substitution method
-    - ```solve_linear_backward``` using the backward substitution method
+  - ```mat* solve_linear_LU(mat* a,mat* b)```
 - Finding the inverse
   - Using LU method
+    - ```mat* mat_inverse(mat* a)```
 - Finding the determinant
-- QR decomposition
- 
-### Background and References
-***
+  - ```double mat_determinant(mat* a)```
 
-- I was completely new to C when I started with this project 
-- I had done a freshmen introduction to linear algebra so I was kind of familiar with the mathematical concepts 
+
+### Background and References
+
+---
+
+- I was completely new to C when I started with this project.
+- I had done a freshmen introduction to linear algebra so I was kind of familiar with the mathematical concepts.
 - References:
-  - 3b1b Linear Algebra playlist
-  - Linear Algebra playlist from Khan Academy
-  - Linear Algebra playlist from MathTheBeautiful
+  - [3b1b Linear Algebra playlist](https://www.youtube.com/watch?v=kjBOesZCoqc&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B)
+  - [Linear Algebra playlist from Khan Academy](https://www.khanacademy.org/math/linear-algebra)
+  - [Linear Algebra playlist from MathTheBeautiful](https://www.youtube.com/watch?v=odV3oJOpE8s&list=PLlXfTHzgMRUIqYrutsFXCOmiqKUgOgGJ5)
   - The C programming language(Dennis Ritchie and Brian Kernighan)
 
 ### Can this be used in production?
-***
-<p>Definitely not, this project was build for educational purposes only and this is definitely not a library that one should use for their projects</p>
+
+---
+
+<p>Definitely not. This project was build for educational purposes only and this is definitely not a library that one should use for their projects.</p>
 
 ### Future of this project
-***
-- This project is far from complete
-- Some new features to be implemented
-  - A CLI interface for users 
+
+---
+
+- This project is far from complete.
+- Some new features to be implemented:
+  - A CLI interface for users
   - Replacing current makefile with CMake
+  - Computing eigenvalues and eignevectors
   - Adding faster algorithms and better data structures
     - Addition of strassen's algorithm for matrix multiplicaton
     - Dense and sparse matrices
     - More...
- 
-

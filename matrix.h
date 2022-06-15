@@ -149,7 +149,7 @@ mat *solve_linear_LU(mat *A, mat *b);
 mat *mat_inverse();
 
 // determinant of matrix using LU(P)
-mat *mat_determinant();
+double *mat_determinant();
 
 // QR decomposition
 mat *mat_QR();
