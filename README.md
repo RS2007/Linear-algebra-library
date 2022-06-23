@@ -42,28 +42,21 @@ $$Solution =>  x=-5,y=6,z=0$$
 
 ---
 
-**Data structures**:
-  - Matrix(```mat```)
-  - ```c
-    {
-        unsigned int num_rows;
-        unsigned int num_cols;
-        double **data;
-        int isSquare;
-    }
-    ```
-  -LUP Matrix(```mat_lup```)
-  - ```c
-    {
-      mat *L;
-      mat *U;
-      mat *P;
-      unsigned int num_permutations;
-    }
-    ```
 
 **API**:
 
+- Create a new matrix:
+  - ```mat* mat_new(unsigned int num_rows,unsigned int num_cols) ```
+  - Assigning values: ```mat->data[row][col] = desired_value```
+- Free a created matrix:
+  - ```void mat_free(mat* matrix)```
+- Create a matrix with random numbers
+  - ```mat *mat_rnd(unsigned int num_rows, unsigned int num_cols, int min, int max)```     
+- Generate a square matrix 
+  - ```mat *mat_sqr(unsigned int rowCol)```
+  - Assigning values: ```mat->data[row][col] = desired_value```
+- Generate a square random matrix
+  - ```mat *mat_sqr_rnd(unsigned int rowCol, int min, int max```   
 - Matrix addition 
   - ```mat* mat_add(mat* a,mat* b)```
 - Matrix subtraction
