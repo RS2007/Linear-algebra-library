@@ -11,12 +11,26 @@
 <br>
 
 $$2*x+5*y+z=20$$
-$$4*x+5*y+z=10$$
-$$6x+5y=0$$
-$$A = \begin{pmatrix} 2 & 5 & 1\\ 4 & 5 & 1\\ 6 & 5 & 0\end{pmatrix}$$
-$$B = \begin{pmatrix} 20 \\ 10 \\ 0\end{pmatrix}$$
 
-Solution => $ x=-5,y=6,z=0$
+$$4*x+5*y+z=10$$
+
+$$6x+5y=0$$
+
+$$A = 
+\begin{pmatrix}
+2 & 5 & 1 \\
+4 & 5 & 1 \\
+6 & 5 & 0 \\
+\end{pmatrix}
+$$
+
+$$B = 
+\begin{pmatrix} 20 \\
+10 \\
+0\\
+\end{pmatrix}$$
+
+$$Solution =>  x=-5,y=6,z=0$$
 
 
 <br/>
